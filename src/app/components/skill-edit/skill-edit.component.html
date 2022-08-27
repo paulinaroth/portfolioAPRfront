@@ -1,0 +1,33 @@
+<div class="container-fluid container-edition">
+    <div class="row justify-content-center py-4 mt-3">
+        <div class="card p-4 border-light shadow" style="max-width: 540px">
+
+            <h4 class="mt-3 text-center">Editar los datos de la habilidad</h4>
+            <form [formGroup]="skillForm" (ngSubmit)="updateSkill()">
+
+                <div class="mb-3">
+                    <input type="hidden" id="id" name="id" class="form-control" formControlName="id" readonly="readonly">
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre de la habilidad: </label>
+                    <input type="text" id="name" name="name" [ngClass]="{'is-invalid': skillForm.get('name')?.touched && skillForm.get('name')?.errors?.['required'], 'is-valid': !skillForm.get('name')?.errors?.['required']}" class="form-control" formControlName="name">
+                    <div *ngIf = "skillForm.get('name')?.touched && skillForm.get('name')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="title" class="form-label">Ícono de la habilidad: </label>
+                    <input type="text" id="icon" name="icon" class="form-control" [ngClass]="{'is-invalid': skillForm.get('icon')?.touched && skillForm.get('icon')?.errors?.['required'], 'is-valid': !skillForm.get('icon')?.errors?.['required']}" formControlName="icon">
+                    <div *ngIf = "skillForm.get('icon')?.touched && skillForm.get('icon')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn" [disabled]="skillForm.invalid">Guardar</button><a class="mx-3" [routerLink]="['/portfolio']">No deseo editar nada</a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

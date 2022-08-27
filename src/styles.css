@@ -1,1 +1,226 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --primary:#DF01A1;
+    --primary-75:rgba(223,1,161,0.75);
+    --secondary:#14192D;
+    --secondary-85:rgba(45,35,57,0.85);
+    --white:#fff;
+    --light-grey:#f3f3f3;
+    --grey:#ccc;
+    --dark-grey:#666;
+    --dark2-grey:#333;
+    --dark3-grey:#222;
+    --black:#000;
+    --accessories:#509ee3;
+    --white-50:rgba(255,255,255,0.5);
+    --white:#fff;
+    --black-50:rgba(0,0,0,0.5);
+
+    --font:'Spartan', sans-serif;
+}
+html{
+    font-family: var(--font) !important;
+}
+
+/* *******Globals******* */
+
+
+h1, h2, h3, h4, h5, h6, p, a{
+    font-family: var(--font);
+}
+h1, h2, h3{
+    font-weight: 700 !important;
+}
+h4, h5, h6, p, a{
+    font-weight: 400 !important;
+}
+
+
+/* ******* Utilities ******* */
+a .fa-brands{
+    color: var(--secondary);
+}
+
+.btn {
+    color: var(--white) !important;
+    background-color: var(--primary) !important;
+}
+.btn:hover {
+    background-color: var(--grey) !important;
+    color: var(--dark3-grey)!important;
+}
+
+.btn-delete{
+    background-color: var(--white)!important;
+    border-radius: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: var(--white);
+}
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 120rem;
+}
+.fa-solid{
+    color: var(--primary);
+}
+
+.background-grey{
+    background-color: var(--light-grey);
+}
+.heading-lines{
+    display:inline-block;
+    position:relative;
+    margin-bottom: 3rem;
+}
+.heading-lines::after, .heading-lines::before{
+    content: "";
+    position: absolute;
+    width: 7rem;
+    height: 0.4rem;
+   
+    background-repeat: no-repeat;
+
+}
+.heading-lines::before{
+     left: 0.7rem;
+     top: 3.5rem;
+     background: linear-gradient(120deg, transparent 0%, var(--primary) 30%, var(--accessories) 80%, transparent 100%);
+}
+.heading-lines::after{
+    left: 3.1rem;
+    top: 2.7rem;
+    background: linear-gradient(120deg, transparent 0%, var(--primary) 30%, transparent 100%);
+}
+/* ******* Styles ******* */
+/* Header */
+.header {
+    min-height: 57rem;
+    background-image: url(https://i.imgur.com/vhb3yDY.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  center;
+}
+
+
+.header-nav{
+    background-color: var(--secondary-85);
+    text-align: center;
+    margin-bottom: 7.3rem;
+}
+
+header h1{
+    color: var(--white);
+    margin-bottom: -1.3rem;
+}
+.header-lines{
+    display:inline-block;
+    position:relative;
+    margin-bottom: 3rem;
+}
+.header-lines::after, .header-lines::before{
+    content: "";
+    position: absolute;
+    width: 10rem;
+    height: 0.5rem;
+    background: linear-gradient(120deg, transparent 0%, var(--primary) 30%, transparent 100%);
+    background-repeat: no-repeat;
+}
+.header-lines::before{
+     left: 1rem;
+     top: 1.9rem;
+}
+.header-lines::after{
+    left: 3.5rem;
+    top: 0.9rem;
+}
+
+.header h3{
+    color: var(--white);
+}
+
+.justify-end-to-center{
+    display: flex;
+    justify-content: flex-end;
+}
+@media (min-width: 642px){
+    .justify-end-to-center{
+        justify-content: center;
+    }
+}
+
+/*Back*/
+.volver{
+    padding: .5rem;
+    margin-top: 1rem;
+    width: max-content;
+    border-radius: 5px;
+    box-shadow: 0.20rem 0.20rem .5rem rgba(0,0,0,0.25);
+    position: relative;
+    right: -90%;
+    opacity: .7;
+}
+@media (min-width:678px){
+    .volver{
+        right: -100%;
+    }
+}
+
+.edition{
+    padding: .5rem;
+    margin: .5rem;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: 0.20rem 0.20rem .5rem rgba(0,0,0,0.25);
+    display: inline;
+    font-size: larger;
+    background-color: var(--white);
+    
+}
+
+/*Skills*/
+.sk-img{
+    max-width: 6rem;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 1.5rem;
+}
+
+/*Education*/
+.edu-img{
+    max-width: 7rem; 
+    height: auto; 
+    position: relative;
+    margin: 1rem auto;
+}
+
+/*Projects*/
+.card-height1{
+    height: 95%;
+}
+
+/*Contact*/
+.contact-img{
+    margin: 1rem auto 0 auto;
+}
+.card-height{
+    height: 93%;
+}
+
+/*Footer*/
+.footer{
+    background-color: var(--secondary);
+}
+
+/*Edition*/
+.container-edition{
+    padding-top: 3rem;    
+    align-items: center;
+    min-height: 57rem;
+    background-image: url(https://i.imgur.com/vhb3yDY.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  center;
+}

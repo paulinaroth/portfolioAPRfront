@@ -1,0 +1,102 @@
+{
+    "name": "Alejandra Paulina Rothermel",
+    "title": "full stack web developer junior",
+    "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam officiis fugiat molestias, aut voluptatum, eligendi inventore aspernatur voluptate et error quasi, voluptates explicabo mollitia earum rerum qui.",
+    "profileimg":"../../../assets/me_bandw.jpg",
+    "skills": [{
+        "name": "HTML 5",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png",
+        "progress": "75"
+    },
+    {
+        "name": "CSS 3",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+        "progress":"60"
+    },
+    {
+        "name": "JavaScript",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
+        "progress": "50"
+    },
+    {
+        "name": "PHP",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png",
+        "progress": "50"
+    },
+    {
+        "name": "MySQL",
+        "image": "http://pngimg.com/uploads/mysql/mysql_PNG1.png",
+        "progress":"50"
+    },
+    {
+        "name": "Illustrator",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Illustrator_CC_icon.png/492px-Illustrator_CC_icon.png",
+        "progress":"50"
+    },
+    {
+        "name": "Photoshop",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1051px-Adobe_Photoshop_CC_icon.svg.png",
+        "progress":"50"
+    }],
+    "education":[{
+        "school":"Loopian",
+        "title":"Diseño Gráfico",
+        "image": "https://y5n7g3m5.rocketcdn.me/cursos/wp-content/uploads/2021/02/logoClaro-e1614083885249.png",
+        "description": "Con el objetivo de entender el mundo de la comunicación y la gráfica, y aprender a utilizar software básico de diseño: Adobe Illustrator, Adobe InDesign y Adobe Photoshop",
+        "site":"https://www.loopian.com.ar/curso/diseno-grafico/"
+    },
+    {
+        "school":"Instituto CBTech",
+        "title":"Experto en Diseño y Programación Web con PHP",
+        "image":"http://institutocbtech.com/wp-content/uploads/2017/03/institutocbtech2.png",
+        "description": "Diseño Web con HTML y CSS3. Programación Web con PHP y MySQL. Portales Ecommerce y Contenido. Marketing por Internet",
+        "site": "http://www.institutocbtech.com/campusvirtual/course/index.php?categoryid=3"
+    },
+    {
+        "school":"Argentina Programa",
+        "title": "Programador web full stack junior",
+        "image": "../../../assets/logo_argentina_programa.jpg",
+        "description": "Argentina Programa: Certificación conjunta del Ministerio de Desarrollo Productivo, la Cámara Argentina de la Industria de Software (CESSI), y del Instituto Nacional de Tecnología Industrial (INTI)",
+        "site": "https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa"
+    }],
+    "projects":[{
+        "name":"Estética y várices",
+        "image":"../../../assets/legs.jpg",
+        "description":"Sitio diseñado para difundir actividad de un profesional médico",
+        "year": "2016",
+        "site": "#"
+    },
+    {
+        "name":"Saber de violines",
+        "image":"../../../assets/violins.jpg",
+        "description": "Realizado como proyecto final de curso de diseño web, empleando HTML y CSS",
+        "year":"2015",
+        "site": "#"
+    },
+    {
+        "name": "Portfolio",
+        "image":"../../../assets/portfolioAP1.jpg",
+        "description":"Aplicación realizada como proyecto integrador de la capacitación Argentina Programa.",
+        "year":"2022",
+        "site": "#"
+    }],
+    "location":"Pueblo Gral. Belgrano - Entre Ríos, Argentina",
+    "email":"rothermel.alejandra@gmail.com",
+    "socialmedia":[
+    {
+        "name":"GitHub",
+        "icon":"<i class='fa-brands fa-github'></i>",
+        "link": "#"
+    },
+    {
+        "name":"Linkedin",
+        "icon":"<i class='fa-brands fa-linkedin'>",
+        "link":"#"
+    },
+    {
+        "name":"Facebook",
+        "icon":"<i class='fa-brands fa-facebook'></i>",
+        "link": "#"
+    }]
+
+}

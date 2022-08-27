@@ -1,0 +1,65 @@
+<header id="inicio" class="container-fluid header">
+        
+    <div class="row">
+       <div class="col header-nav">
+  
+           <nav class="navbar navbar-expand-lg  navbar-dark ">
+               <div class="container-fluid">
+                   <a class="navbar-brand" href="#"><img src="../assets/logoAP.svg" alt="Argentina Programa"></a>
+                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarText">
+                       <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4">
+                           
+                           <li class="nav-item">
+                               <a class="nav-link" href="#sobre_mi">Sobre mí</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="#habilidades">Habilidades</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="#educacion">Educación</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="#proyectos">Proyectos</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="#contacto">Contacto</a>
+                           </li>
+                       </ul>
+                       <span class="navbar-text" id="loggedOrNot">
+                           <div class="col edition" *ngIf="loggedUser | async as user; else notLogged">
+                            <button class="btn-delete" (click)="logOut()" > <i class="fa-solid fa-right-from-bracket"></i></button>
+                           </div>
+                           <ng-template #notLogged ><a class="nav-link fs-3" [routerLink]="['/login']"><i class="fa-solid fa-right-to-bracket"></i></a> </ng-template>
+                       </span>
+                   </div>
+               </div>
+           </nav>
+  
+       </div>
+   </div> 
+   
+   <div class="container-lg ">
+       <div class="contenedor row justify-content-start">
+           <div class="col-6">
+               <h1 class="display-2">{{person.name}}</h1>
+               <div class="header-lines"></div>
+               
+           </div>
+           <div class="row justify-content-start">
+               <div class="col-4">
+                   <h3 class="display-6">{{person.title}}</h3>
+               </div>
+           </div>
+       </div>
+       <div class="contenedor justify-end-to-center">
+           <div>
+               <a class="btn btn-lg" href="#contacto">Contacto</a>
+           </div>
+       </div>
+  
+   </div>
+   
+  </header>

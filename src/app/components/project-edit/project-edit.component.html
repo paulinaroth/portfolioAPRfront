@@ -1,0 +1,54 @@
+<div class="container-fluid container-edition">
+    <div class="row justify-content-center py-4 mt-3">
+        <div class="card p-4 border-light shadow" style="max-width: 540px">
+            <h4 class="mt-3 text-center">Completar los datos del proyecto participado</h4>
+            <form [formGroup]="projectForm" (ngSubmit)="updateProject()">
+
+                <div class="mb-3">
+                    <label for="id" class="form-label"> </label>
+                    <input type="hidden" id="id" name="id" class="form-control" formControlName="id" readonly="readonly">
+                </div>
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre del proyecto: </label>
+                    <input type="text" id="name" name="name" [ngClass]="{'is-invalid': projectForm.get('name')?.touched && projectForm.get('name')?.errors?.['required'], 'is-valid': !projectForm.get('name')?.errors?.['required']}" class="form-control" formControlName="name">
+                    <div *ngIf = "projectForm.get('name')?.touched && projectForm.get('name')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="image" class="form-label">Imagen del sitio: </label>
+                    <input type="text" id="image" name="image" class="form-control" [ngClass]="{'is-invalid': projectForm.get('image')?.touched && projectForm.get('image')?.errors?.['required'], 'is-valid': !projectForm.get('image')?.errors?.['required']}" formControlName="image">
+                    <div *ngIf = "projectForm.get('image')?.touched && projectForm.get('image')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descripción del proyecto: </label>
+                    <textarea id="description" name="description" class="form-control" rows="3" [ngClass]="{'is-invalid': projectForm.get('description')?.touched && projectForm.get('description')?.errors?.['required'], 'is-valid': !projectForm.get('description')?.errors?.['required']}" formControlName="description"></textarea>
+                    <div *ngIf = "projectForm.get('description')?.touched && projectForm.get('description')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="ryear" class="form-label">Año : </label>
+                    <input type="ryear" id="year" name="ryear" class="form-control" [ngClass]="{'is-invalid': projectForm.get('ryear')?.touched && projectForm.get('ryear')?.errors?.['required'], 'is-valid': !projectForm.get('ryear')?.errors?.['required']}" formControlName="ryear">
+                    <div *ngIf = "projectForm.get('ryear')?.touched && projectForm.get('ryear')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                
+
+                <div class="mb-3">
+                    <label for="site" class="form-label">Sitio donde se aloja el proyecto: </label>
+                    <input type="text" id="site" name="site" class="form-control" [ngClass]="{'is-invalid': projectForm.get('site')?.touched && projectForm.get('site')?.errors?.['required'], 'is-valid': !projectForm.get('site')?.errors?.['required']}" formControlName="site">
+                    <div *ngIf = "projectForm.get('site')?.touched && projectForm.get('site')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn" [disabled]="projectForm.invalid">Guardar</button> <a class="mx-3" [routerLink]="['/portfolio']">No deseo editar nada</a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

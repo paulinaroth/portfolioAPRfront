@@ -1,0 +1,73 @@
+<div class="container-fluid container-edition">
+    <div class="row justify-content-center py-4 mt-3">
+        <div class="card p-4 border-light shadow" style="max-width: 540px">
+            <h4 class="mt-3 text-center">Editá el perfil</h4>
+            <form [formGroup]="personForm" (ngSubmit)="update()">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre y apellido: </label>
+                    <input type="text" id="name" name="name" class="form-control" [ngClass]="{'is-invalid': personForm.get('name')?.touched && personForm.get('name')?.errors?.['required'], 'is-valid': !personForm.get('name')?.errors?.['required']}" class="form-control" formControlName="name">
+                    <div *ngIf = "personForm.get('name')?.touched && personForm.get('name')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="title" class="form-label">Título: </label>
+                    <input type="text" id="title" name="title" class="form-control" [ngClass]="{'is-invalid': personForm.get('title')?.touched && personForm.get('title')?.errors?.['required'], 'is-valid': !personForm.get('title')?.errors?.['required']}" class="form-control" formControlName="title">
+                    <div *ngIf = "personForm.get('title')?.touched && personForm.get('title')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="about" class="form-label">Sobre mí: </label>
+                    <textarea id="about" name="about" class="form-control" [ngClass]="{'is-invalid': personForm.get('about')?.touched && personForm.get('about')?.errors?.['required'], 'is-valid': !personForm.get('about')?.errors?.['required']}" class="form-control" formControlName="about" rows="3"></textarea>
+                    <div *ngIf = "personForm.get('about')?.touched && personForm.get('about')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="profileimg" class="form-label">Url de imagen de perfil: </label>
+                    <input type="text" id="profileimg" name="profileimg" class="form-control" [ngClass]="{'is-invalid': personForm.get('profileimg')?.touched && personForm.get('profileimg')?.errors?.['required'], 'is-valid': !personForm.get('profileimg')?.errors?.['required']}" formControlName="profileimg">
+                    <div *ngIf = "personForm.get('profileimg')?.touched && personForm.get('profileimg')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email: </label>
+                    <input type="text" id="email" name="email" class="form-control" [ngClass]="{'is-invalid': personForm.get('email')?.touched && personForm.get('email')?.errors?.['required'] || personForm.get('email')?.touched && personForm.get('email')?.errors?.['email'], 'is-valid': !personForm.get('email')?.errors?.['required']&& !personForm.get('email')?.errors?.['email']}" formControlName="email">
+                    <div *ngIf = "personForm.get('email')?.touched && personForm.get('email')?.errors?.['email']" ><p class="text-danger">Se debe ingresar un e-mail válido</p></div>
+                    <div *ngIf = "personForm.get('email')?.touched && personForm.get('email')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    
+                    <label for="province" class="form-label">Seleccionar una provincia: </label>
+                    <select id="province" name="province" class="form-select form-control" [ngClass]="{'is-invalid': personForm.get('province')?.touched && personForm.get('province')?.errors?.['required'], 'is-valid': !personForm.get('province')?.errors?.['required']}" formControlName="province">               
+                        <option *ngFor="let item of provinces" [ngValue]="item">{{item.name}}</option>
+                        
+                    </select>
+                    <div *ngIf = "personForm.get('province')?.touched && personForm.get('province')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <ng-container >
+                    <label for="location" class="form-label">Seleccionar una Localidad: </label>
+                    <select id="location" name="location" class="form-select form-control" [ngClass]="{'is-invalid': personForm.get('location')?.touched && personForm.get('location')?.errors?.['required'], 'is-valid': !personForm.get('location')?.errors?.['required']}" formControlName="location">
+                        <option *ngFor="let item of localities" [ngValue]="item">{{item.name}}</option>
+                    </select>
+                    <div *ngIf = "personForm.get('location')?.touched && personForm.get('location')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                    </ng-container>
+                </div>
+
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn" [disabled]="personForm.invalid">Guardar</button> <a class="mx-3" [routerLink]="['/portfolio']">No deseo editar nada</a>
+                </div>
+
+
+            </form>
+        </div>
+        
+
+        
+
+    </div>
+
+</div>
+
+

@@ -1,0 +1,64 @@
+<div class="container-fluid container-edition">
+    <div class="row justify-content-center py-4 mt-3">
+        <div class="card p-4 border-light shadow" style="max-width: 540px">
+            <h4 class="mt-3 text-center">Completar los datos de la instancia formativa</h4>
+            <form [formGroup]="educationForm" (ngSubmit)="saveEducation(person.id)">
+
+                <div class="mb-3">
+                    <label for="school" class="form-label">Institución: </label>
+                    <input type="text" id="school" name="school" [ngClass]="{'is-invalid': educationForm.get('school')?.touched && educationForm.get('school')?.errors?.['required'], 'is-valid': !educationForm.get('school')?.errors?.['required']}" class="form-control" formControlName="school">
+                    <div *ngIf = "educationForm.get('school')?.touched && educationForm.get('school')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="title" class="form-label">Título obtenido: </label>
+                    <input type="text" id="title" name="title" class="form-control" [ngClass]="{'is-invalid': educationForm.get('title')?.touched && educationForm.get('title')?.errors?.['required'], 'is-valid': !educationForm.get('title')?.errors?.['required']}" formControlName="title">
+                    <div *ngIf = "educationForm.get('title')?.touched && educationForm.get('title')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="logo" class="form-label">Url del logo de la institución: </label>
+                    <input type="text" id="logo" name="logo" class="form-control" [ngClass]="{'is-invalid': educationForm.get('logo')?.touched && educationForm.get('logo')?.errors?.['required'], 'is-valid': !educationForm.get('logo')?.errors?.['required']}" formControlName="logo">
+                    <div *ngIf = "educationForm.get('logo')?.touched && educationForm.get('logo')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descripción de carrera/curso: </label>
+                    <textarea id="description" name="description" class="form-control" rows="3" [ngClass]="{'is-invalid': educationForm.get('description')?.touched && educationForm.get('description')?.errors?.['required'], 'is-valid': !educationForm.get('description')?.errors?.['required']}" formControlName="description"></textarea>
+                    <div *ngIf = "educationForm.get('description')?.touched && educationForm.get('description')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="start_year" class="form-label">Año de inicio de cursada: </label>
+                    <input type="start_year" id="start_year" name="start_year" class="form-control" [ngClass]="{'is-invalid': educationForm.get('start_year')?.touched && educationForm.get('start_year')?.errors?.['required'], 'is-valid': !educationForm.get('start_year')?.errors?.['required']}" formControlName="start_year">
+                    <div *ngIf = "educationForm.get('start_year')?.touched && educationForm.get('start_year')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="ending_year" class="form-label">Año de finalización de cursada: </label>
+                    <input type="ending_year" id="ending_year" name="ending_year" class="form-control" [ngClass]="{'is-invalid': educationForm.get('ending_year')?.touched && educationForm.get('ending_year')?.errors?.['required'], 'is-valid': !educationForm.get('ending_year')?.errors?.['required']}" formControlName="ending_year">
+                    <div *ngIf = "educationForm.get('ending_year')?.touched && educationForm.get('ending_year')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="site" class="form-label">Sitio de la institución: </label>
+                    <input type="text" id="site" name="site" class="form-control" [ngClass]="{'is-invalid': educationForm.get('site')?.touched && educationForm.get('site')?.errors?.['required'], 'is-valid': !educationForm.get('site')?.errors?.['required']}" formControlName="site">
+                    <div *ngIf = "educationForm.get('site')?.touched && educationForm.get('site')?.errors?.['required']" ><p class="text-danger">Campo requerido</p></div>
+                </div>
+
+
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn" [disabled]="educationForm.invalid">Guardar</button> <a class="mx-3" [routerLink]="['/portfolio']">No deseo agregar nada</a>
+                </div>
+
+
+            </form>
+        </div>
+        
+
+        
+
+    </div>
+
+</div>
+
